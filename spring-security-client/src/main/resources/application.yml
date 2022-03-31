@@ -1,0 +1,15 @@
+server:
+    port: 8082
+spring:
+    datasource:
+        password: mwas
+        url: jdbc:postgresql://localhost:5430/user_registration
+        username: postgres
+    jpa:
+        hibernate:
+            ddl-auto: update
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.PostgreSQLDialect
+                format_sql: true
+        show-sql: true
