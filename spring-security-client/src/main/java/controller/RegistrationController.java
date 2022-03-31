@@ -1,7 +1,7 @@
 package controller;
 
 import entity.User;
-import event.ApplicationCompleteEvent;
+import event.RegistrationCompleteEvent;
 import model.UserModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
@@ -23,7 +23,9 @@ public class RegistrationController {
     @PostMapping("/register")
     public String registerUser(@RequestBody UserModel userModel) {
         User user = userService.registerUser(userModel);
-        publisher.publishEvent(new ApplicationCompleteEvent(user, "url"));
+        publisher.publishEvent(new RegistrationCompleteEvent(user,
+                "url"));
+
         return "Success";
     }
 }
