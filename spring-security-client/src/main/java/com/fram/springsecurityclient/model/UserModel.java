@@ -1,4 +1,4 @@
-package model;
+package com.fram.springsecurityclient.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

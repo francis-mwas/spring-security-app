@@ -1,6 +1,6 @@
-package event;
+package com.fram.springsecurityclient.event;
 
-import entity.User;
+import com.fram.springsecurityclient.entity.AppUser;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.context.ApplicationEvent;
@@ -10,9 +10,9 @@ import org.springframework.context.ApplicationEvent;
 @Setter
 public class RegistrationCompleteEvent extends ApplicationEvent {
 
-    private User user;
+    private AppUser user;
     private String applicationUrl;
-    public RegistrationCompleteEvent(User user, String applicationUrl) {
+    public RegistrationCompleteEvent(AppUser user, String applicationUrl) {
         super(user);
         this.user = user;
         this.applicationUrl = applicationUrl;

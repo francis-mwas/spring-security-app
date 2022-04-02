@@ -1,4 +1,4 @@
-package entity;
+package com.fram.springsecurityclient.entity;
 
 import lombok.Data;
 
@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 @Entity
 @Data
-public class User {
+public class AppUser {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,10 +14,10 @@ public class User {
     private String firstName;
     private String lastName;
     private String email;
-    @Column(
-            length = 60
-    )
+
+    @Column(length = 60)
     private String password;
+
     private String role;
-    private boolean enabled=false;
+    private boolean enabled = false;
 }

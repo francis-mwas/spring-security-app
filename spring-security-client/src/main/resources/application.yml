@@ -2,9 +2,9 @@ server:
     port: 8082
 spring:
     datasource:
+        username: postgres
         password: mwas
         url: jdbc:postgresql://localhost:5430/user_registration
-        username: postgres
     jpa:
         hibernate:
             ddl-auto: update

@@ -1,4 +1,4 @@
-package entity;
+package com.fram.springsecurityclient.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,7 +16,7 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 public class VerificationToken {
-    
+
     private static final int EXPIRATION_TIME = 10;
 
 
@@ -30,9 +30,9 @@ public class VerificationToken {
     @JoinColumn(name = "user_id",
             nullable = false,
             foreignKey = @ForeignKey(name = "FK_USER_VERIFY_TOKEN"))
-    private User user;
+    private AppUser user;
 
-    public VerificationToken(String token, User user) {
+    public VerificationToken(String token, AppUser user) {
         super();
         this.token = token;
         this.user = user;
